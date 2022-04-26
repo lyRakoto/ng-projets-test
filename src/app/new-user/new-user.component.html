@@ -1,0 +1,86 @@
+<div class="row">
+	<div class="col-sm-8 col-sm-offset-2">
+		<h2>Add a new User</h2>
+		<form [formGroup]="userForm" id="FORM__userForm__6a6470aa-92cf-4eeb-9026-c46d4b4373f3" (ngSubmit)="trace($event); onSaveUser()">
+			<div class="form-group">
+				<label for="firstName">First Name*</label>
+				<input type="text" class="form-control" id="firstName" formControlName="firstName" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="lastName">Last Name*</label>
+				<input type="text" class="form-control" id="lastName" formControlName="lastName" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label>Gender*</label><br>
+				<div class="radio-inline">
+					<input type="radio" class="form-check-input" id="gender1" name="gender" formControlName="gender" value="M" data-eventful-widget="true" (change)="trace($event);">
+					<label for="gender1" class="form-check-label">M</label>
+				</div>
+				<div class="radio-inline">
+					<input type="radio" class="form-check-input" id="gender2" name="gender" formControlName="gender" value="F" data-eventful-widget="true" (change)="trace($event);">
+					<label for="gender2" class="form-check-label">F</label>
+				</div>
+				<div class="radio-inline">
+					<input type="radio" class="form-check-input" id="gender3" name="gender" formControlName="gender" value="Other" data-eventful-widget="true" (change)="trace($event);">
+					<label for="gender3" class="form-check-label">Other</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="email">Email*</label>
+				<input type="email" class="form-control" id="email" formControlName="email" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="password">Password*</label>
+				<input type="password" class="form-control" id="password" formControlName="password" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="birthday">Birthday*</label>
+				<input type="date" class="form-control" id="birthday" formControlName="birthday" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="telephone">Telephone*</label>
+				<input type="tel" class="form-control" id="telephone" formControlName="telephone" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="country">Country*</label>
+				<select class="form-control" id="country" formControlName="country" data-eventful-widget="true" (change)="trace($event);">
+					<option value="France">France</option>
+					<option value="USA">USA</option>
+					<option value="Germany">Germany</option>
+					<option value="Canada">Canada</option>
+					<option value="Japan">Japan</option>
+					<option value="Lebanon">Lebanon</option>
+					<option value="Algeria">Algeria</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="bio">Bio</label>
+				<textarea class="form-control" id="bio" formControlName="bio" placeholder="Studies, Hobbies, etc." data-eventful-widget="true" (focusout)="trace($event);"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="favoriteNumber">Favorite Number</label>
+				<input type="number" class="form-control" id="favoriteNumber" formControlName="favoriteNumber" data-eventful-widget="true" (change)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="favoriteColor">Favorite Color</label>
+				<input type="color" class="form-control" id="favoriteColor" formControlName="favoriteColor" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<p>Do you think the machine will swallow us all one day? </p>
+				<input type="range" class="form-control" id="agreementLevel" formControlName="agreementLevel" step="20" data-eventful-widget="true" (focusout)="trace($event);">
+			</div>
+			<div class="form-group">
+				<label for="avatarImage">Upload an avatar image</label>
+				<input type="file" class="form-control" id="avatarImage" formControlName="avatarImage" data-eventful-widget="true" (input)="trace($event);">
+			</div>
+			<div class="form-group">
+				<div class="checkbox-inline">
+					<input type="checkbox" class="form-check-input" id="newsletter" name="newsletter" formControlName="newsletter" data-eventful-widget="true" (change)="trace($event);">
+					<label for="newsletter" class="form-check-label">Subscribe to Newsletter</label>
+				</div>
+			</div>
+			<button class="btn btn-success" type="submit" [disabled]="userForm.invalid" data-eventful-widget="true" id="BUTTON__Create_User__e3c2c442-720f-44dc-8c4a-b375b71f5e5e">Create User
+			</button>
+		</form>
+	</div>
+</div>

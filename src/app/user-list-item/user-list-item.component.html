@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item': true}">
+    <img [src]="user.avatarImagePath" alt="avatar-image" class="img-thumbnail">
+    <p style="color:grey">{{ user.createdAt | date: 'short' }}</p>
+    <h3>{{ user.firstName }} {{ user.lastName }} ({{ user.gender }})</h3>
+    <h4>Birthday: {{ user.birthday | date: 'd/M/Y' }}</h4>
+    <h4>Email: {{ user.email }}</h4>
+    <h4>Country: {{ user.country }}</h4>
+    <h4>Telephone: {{ user.telephone }}</h4>
+    <div *ngIf="user.bio">
+        <h4 class="panel">Bio</h4>
+        <div class="jumbotron">
+            <p>{{ user.bio }}</p>
+        </div>
+    </div>
+    <h4>Favorite Number: {{ user.favoriteNumber }}</h4>
+    <h4>Favorite Color: {{ user.favoriteColor }}</h4>
+    <h4>Level of Agreement on Survey Question: {{ user.agreementLevel }}</h4>
+    <p *ngIf="user.getsNewsletter">Subscribed to Newsletter</p>
+</li>

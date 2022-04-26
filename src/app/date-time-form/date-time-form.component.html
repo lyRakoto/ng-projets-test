@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="col-xs-12">
+    <form [formGroup]="dateTimeForm" id="FORM__dateTimeForm__074c650c-4bd8-4e2b-9994-b50d0ac8d6f0" (ngSubmit)="trace($event); onSubmit()">
+      <div class="form-group">
+        <label for="dateTime">Local Date-Time: </label>
+        <input type="dateTime-local" class="form-control" formControlName="dateTime" data-eventful-widget="true" id="INPUT__dateTime__93063e79-0fda-40bd-b4bf-ba7d357a9e45">
+      </div>
+      <div class="form-group">
+        <label for="time">Time: </label>
+        <input type="time" class="form-control" formControlName="time" data-eventful-widget="true" id="INPUT__time__26aed0c1-9b99-44e4-97f4-d92544935fd8" (focusout)="trace($event);">
+      </div>
+      <div class="form-group">
+        <label for="month">Month: </label>
+        <input type="month" class="form-control" formControlName="month" data-eventful-widget="true" id="INPUT__month__610b89ea-fa7a-4529-b7b1-a5035ac12400" (focusout)="trace($event);">
+      </div>
+      <div class="form-group">
+        <label for="week">Week: </label>
+        <input type="week" class="form-control" formControlName="week" data-eventful-widget="true" id="INPUT__week__401832ca-7d79-4352-b9a3-d7231285ea00" (focusout)="trace($event);">
+      </div>
+      <button type="submit" data-eventful-widget="true" id="BUTTON__Update_Values__2684b9ac-bf3a-4a5f-9404-67e0ecfcb5c0">Update Values</button>
+    </form>
+      <h1>Results</h1>
+      <div class="list-group">
+        <li class="list-group-item" *ngIf="dateTime">
+          <h2>Local Date-Time: {{ dateTime }}</h2>
+        </li>
+        <li class="list-group-item" *ngIf="time">
+          <h2>Time: {{ time }}</h2>
+        </li>
+        <li class="list-group-item" *ngIf="month">
+          <h2>Month: {{ month }}</h2>
+        </li>
+        <li class="list-group-item" *ngIf="week">
+          <h2>Week: {{ week }}</h2>
+        </li>
+      </div>
+  </div>
+</div>

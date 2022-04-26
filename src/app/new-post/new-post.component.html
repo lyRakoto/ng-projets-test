@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <h2>Add a new Post</h2>
+        <form [formGroup]="postForm" id="FORM__postForm__f7a40c2b-d1c1-416a-b090-8f0cb06b882b" (ngSubmit)="trace($event); onSavePost()">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" formControlName="title" data-eventful-widget="true" (focusout)="trace($event);">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <input type="text" class="form-control" id="content" formControlName="content" data-eventful-widget="true" (focusout)="trace($event);">
+            </div>
+            <button class="btn btn-success" type="submit" [disabled]="postForm.invalid" data-eventful-widget="true" id="BUTTON__Create_Post__c4882653-addf-4b27-8260-73dfda4e0527">Create Post
+            </button>
+        </form>
+    </div>
+</div>

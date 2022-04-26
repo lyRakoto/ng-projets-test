@@ -1,0 +1,10 @@
+<li [ngClass]="{'list-group-item': true, 
+'list-group-item-success': post.loveIts > 0,
+'list-group-item-danger': post.loveIts < 0}">
+    <p style="color:grey">{{ post.createdAt | date: 'short' }}</p>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <button type="button" class="btn btn-success" style="color: white;background-color: green; margin: 10px;" data-eventful-widget="true" id="BUTTON__Love_it!__0fae76eb-d71b-4c2f-94b8-97b740d5370b" (click)="trace($event); onLoveIt()">Love it!</button>
+    <button type="button" class="btn btn-danger" style="color: white;background-color: red;" data-eventful-widget="true" id="BUTTON__Don't_love_it!__7b7ee168-bf8a-4f04-ad1b-1065bd17f1a7" (click)="trace($event); onNotLoveIt()">Don't love it!</button>
+    <button type="button" class="btn btn-default pull-right" data-eventful-widget="true" id="BUTTON__Delete__001a5f8c-d18b-4b30-9c94-65fbc2b2935f" (click)="trace($event); onDelete()">Delete</button>
+</li>

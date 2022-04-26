@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-xs-12">
+    <form [formGroup]="searchForm" id="FORM__searchForm__3bb3ae8b-fe67-4da9-8e00-58e05fef128e" (ngsubmit)="trace($event);">
+      <div class="form-group">
+        <label for="userSearch">Search for Users by Email: </label>
+        <input type="search" class="form-control" name="user-search" formControlName="userSearch" (ngModel)="searchedUsers" (ngModelChange)="onUsersSearchChange()" data-eventful-widget="true" id="INPUT__user-search__3a80172f-31b0-49c7-a64b-41699b136f4f" (focusout)="trace($event);">
+      </div>
+    </form>
+      <h2>Results</h2>
+      <div class="list-group">
+        <app-user-list-item *ngFor="let user of searchedUsers" [user]="user">
+        </app-user-list-item>
+      </div>
+  </div>
+</div>
